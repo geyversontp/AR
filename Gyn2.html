@@ -59,14 +59,12 @@ function showPosition(position) {
   
   var lat_local = document.getElementById("local-01").getAttribute("lat");
   var long_local = document.getElementById("local-01").getAttribute("long");
-	
-  //x.innerHTML = "Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude;
-	
-  //x.innerHTML = x.innerHTML + " -> " + distance(lat_local_01, long_local_01, position.coords.latitude, position.coords.longitude, 'meter');
-	
-  //x.innerHTML = distance(lat_local_01, long_local_01, position.coords.latitude, position.coords.longitude);
   
-  x.innerHTML = distance(lat_local, long_local, position.coords.latitude, position.coords.longitude);
+  var distancia = distance(lat_local, long_local, position.coords.latitude, position.coords.longitude);
+  x.innerHTML = distancia;
+	
+  document.getElementById("label-local-01").setAttribute("valeu") = document.getElementById("local-01").getAttribute("place-label") + "</br> " + distancia;
+	
 }
 
 function showError(error) {
@@ -104,7 +102,7 @@ function distance(lat1, lon1, lat2, lon2) {
 		dist = dist * 180/Math.PI;
 		dist = dist * 60 * 1.1515;
 		dist = dist * 1.609344 * 1000;
-		dist = Math.round(dist * 100) / 100;
+		dist = Math.round(dist * 10) / 10;
 		return dist;
 	}
 }
@@ -130,10 +128,12 @@ function distance(lat1, lon1, lat2, lon2) {
 	  scale="5 5 5"
 	  lat = "-16.628820" 
           long = "-49.250024"
+	  place-label = "Street"
       >
 	    <a-text
         	value="Street"
 		position=".5 1 0">
+		id="label-local-01"
 	      </a-text>
 	</a-image>
       
