@@ -10,14 +10,11 @@
   </head>
   
   <script>
-	  
-	  const distanceMsg = "teste";
-	  
-	  distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
-	  
-	  console.log(distanceMsg);
-	  
+  
 	  document.querySelector(".testbutton").addEventListener("click", function () {
+		const distanceMsg = "teste";
+	  	distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+	  	console.log(distanceMsg);
 		document.getElementById("Distance").innerHTML = distanceMsg;
                 });
     
@@ -50,7 +47,7 @@
   <body style="margin: 0; overflow: hidden;">
     
     <div class="buttons">
-	    <button class="testbutton" id="Distance">Distance</button>
+	    <button class="testbutton" id="Distance">--</button>
 	  </div>
     
     <a-scene
@@ -60,17 +57,18 @@
     >
       
 
-      <a-text
-        value="Street"
-        look-at="[gps-camera]"
-        scale="5 5 5"
-        gps-entity-place="latitude: -16.628796; longitude: -49.250051;"
-      >
+      
       <a-image
           src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
-          
-      ></a-image>    
-   </a-text>
+	  look-at="[gps-camera]"
+          gps-entity-place="latitude: -16.628820; longitude: -49.250024;"
+      >
+	    <a-text
+        	value="Street"
+        	scale="5 5 5"
+		position=".5 1 0">
+	      </a-text>
+	</a-image>
       
       
       <a-camera gps-camera rotation-reader> </a-camera>
