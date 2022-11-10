@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>EMC-UFG</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+      
+
+      <a-text
+        value="Lionard's Pizzaria"
+        look-at="[gps-camera]"
+        scale="5 5 5"
+        gps-entity-place="latitude: -16.629597; longitude: -49.248088;"
+        position="0 30 0"
+      >
+        <a-image
+            src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
+            position=".5 1 0"
+        ></a-image>    
+     </a-text>
+
+
+      <a-text
+        value="Papo de Buteco"
+        look-at="[gps-camera]"
+        scale="5 5 5"
+        gps-entity-place="latitude: -16.631255; longitude: -49.251238;"
+        position="0 30 0"
+      >
+      <a-image
+          src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
+          position=".5 1 0"
+      ></a-image>    
+   </a-text>
+      
+
+
+
+      <a-camera gps-camera rotation-reader> </a-camera>
+    </a-scene>
+  </body>
+</html>
