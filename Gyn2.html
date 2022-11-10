@@ -36,8 +36,6 @@
   <body style="margin: 0; overflow: hidden;">
 	  
 <script>
-
-var x = document.getElementById("Distance");
 	  
 var lat_local_01 = -16.628820; 
 var long_local_01 = -49.250024;
@@ -48,6 +46,7 @@ function teste()
 }
 	
 function getLocation() {
+  var x = document.getElementById("Distance");
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
   } else { 
@@ -56,6 +55,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
+  var x = document.getElementById("Distance");
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   " Longitude: " + position.coords.longitude;
 	
@@ -63,6 +63,7 @@ function showPosition(position) {
 }
 
 function showError(error) {
+  var x = document.getElementById("Distance");
   switch(error.code) {
     case error.PERMISSION_DENIED:
       x.innerHTML = "User denied the request for Geolocation."
