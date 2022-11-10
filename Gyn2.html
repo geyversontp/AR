@@ -22,7 +22,7 @@
       z-index: 10;
     }
 
-    .testbutton {
+    .say-hi-button {
       padding: 0.25em;
       border-radius: 4px;
       border: none;
@@ -36,17 +36,17 @@
   <body style="margin: 0; overflow: hidden;">
 	  
 <script>
-  
-function textbutton()
-{
-	document.getElementById("Distance").innerHTML = "Troca!";
-}
-	  
+
 var x = document.getElementById("Distance");
 	  
 var lat_local_01 = -16.628820; 
 var long_local_01 = -49.250024;
 
+function teste()
+{
+	document.getElementById("Distance").innerHTML = "Troca!";
+}
+	
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -131,7 +131,7 @@ function distance(lat1, lon1, lat2, lon2, unit) {
   </script>
     
     <div class="buttons">
-	    <button class="testbutton" id="Distance" onclick="getLocation()">--</button>
+	    <button class="say-hi-button" id="Distance" onclick="teste()">--</button>
 	  </div>
     
     <a-scene
