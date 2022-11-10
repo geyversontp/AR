@@ -59,7 +59,7 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   " Longitude: " + position.coords.longitude;
 	
-  //x.innerHTML = 1000*distance(lat_local_01, long_local_01, position.coords.latitude, position.coords.longitude, 'K');
+  x.innerHTML = 1000*distance(lat_local_01, long_local_01, position.coords.latitude, position.coords.longitude, 'K');
 }
 
 function showError(error) {
