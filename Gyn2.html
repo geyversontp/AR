@@ -57,8 +57,8 @@ function showPosition(position) {
   
   var x = document.getElementById("Distance");
   
-  var lat_local = document.getElementById("local-01").getAttribute("Lat");
-  var long_local = document.getElementById("local-01").getAttribute("Long");
+  var lat_local = document.getElementById("local-01").getAttribute("lat");
+  var long_local = document.getElementById("local-01").getAttribute("long");
 	
   //x.innerHTML = "Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude;
 	
@@ -128,8 +128,8 @@ function distance(lat1, lon1, lat2, lon2) {
           gps-entity-place="latitude: -16.628820; longitude: -49.250024;"
 	  id="local-01"
 	  scale="5 5 5"
-	  Lat = "-16.628820" 
-          Long = "-49.250024"
+	  lat = "-16.628820" 
+          long = "-49.250024"
       >
 	    <a-text
         	value="Street"
