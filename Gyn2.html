@@ -52,9 +52,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  var lat_local_01 = -16.628820; 
-  var long_local_01 = -49.250024;
-  
+
   var x = document.getElementById("Distance");
   
   var lat_local = document.getElementById("local-01").getAttribute("lat");
@@ -63,7 +61,7 @@ function showPosition(position) {
   var distancia = distance(lat_local, long_local, position.coords.latitude, position.coords.longitude);
   x.innerHTML = distancia;
 	
-  document.getElementById("label-local-01").setAttribute("value", document.getElementById("local-01").getAttribute("place-label") + "</br> " + distancia);
+  document.getElementById("label-local-01").setAttribute("value", document.getElementById("local-01").getAttribute("place-label") + " (" + distancia + " m)");
 	
 }
 
@@ -123,15 +121,15 @@ function distance(lat1, lon1, lat2, lon2) {
       <a-image
           src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
 	  look-at="[gps-camera]"
-          gps-entity-place="latitude: -16.628820; longitude: -49.250024;"
+          gps-entity-place="latitude: -16.629478; longitude: -49.249568;"
 	  id="local-01"
 	  scale="5 5 5"
-	  lat = "-16.628820" 
-          long = "-49.250024"
-	  place-label = "Street"
+	  lat = "-16.629478" 
+          long = "-49.249568"
+	  place-label = "Frango ao Ponto"
       >
 	    <a-text
-        	value="Street"
+        	value="Frango ao Ponto"
 		position=".5 1 0"
 		id="label-local-01"
 		    >
