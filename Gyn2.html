@@ -13,7 +13,7 @@
   
 	  document.querySelector(".testbutton").addEventListener("click", function () {
 		const distanceMsg = "teste";
-	  	distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+	  	distanceMsg = document.getElementById("local-01").getAttribute('distanceMsg');
 	  	console.log(distanceMsg);
 		document.getElementById("Distance").innerHTML = distanceMsg;
                 });
@@ -62,6 +62,8 @@
           src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
 	  look-at="[gps-camera]"
           gps-entity-place="latitude: -16.628820; longitude: -49.250024;"
+	  id="local-01"
+	  scale="5 5 5"
       >
 	    <a-text
         	value="Street"
