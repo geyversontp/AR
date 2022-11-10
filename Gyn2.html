@@ -11,7 +11,7 @@
   
   <script>
     const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
-    //console.log(distanceMsg);
+    console.log(distanceMsg);
     document.getElementById("Distance").innerHTML = distanceMsg;
   </script>
 
@@ -34,7 +34,7 @@
       border: none;
       background: white;
       color: black;
-      width: 4em;
+      width: 100%;
       height: 4em;
     }
 	</style>
@@ -57,44 +57,12 @@
         look-at="[gps-camera]"
         scale="5 5 5"
         gps-entity-place="latitude: -16.628796; longitude: -49.250051;"
-        position="0 755 0"
       >
       <a-image
           src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
-          position=".5 1 0"
+          
       ></a-image>    
    </a-text>
-      
-      
-      
-      <a-text
-        value="Lionards Pizzaria"
-        look-at="[gps-camera]"
-        scale="5 5 5"
-        gps-entity-place="latitude: -16.629597; longitude: -49.248088;"
-        position="0 30 0"
-      >
-        <a-image
-            src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
-            position=".5 1 0"
-        ></a-image>    
-     </a-text>
-
-      
-
-      <a-text
-        value="Papo de Buteco"
-        look-at="[gps-camera]"
-        scale="5 5 5"
-        gps-entity-place="latitude: -16.631255; longitude: -49.251238;"
-        position="0 0 0"
-      >
-      <a-image
-          src="https://rawcdn.githack.com/AR-js-org/AR.js/3d6bbc94d07686c29288092e00427c7ae8101631/aframe/examples/location-based/assets/map-marker.png"
-          position=".5 1 0"
-      ></a-image>    
-   </a-text>
-      
       
       
       <a-camera gps-camera="minDistance: 5; maxDistance: 300;" rotation-reader> </a-camera>
