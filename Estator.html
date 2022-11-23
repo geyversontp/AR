@@ -9,6 +9,7 @@
 	var end = "https://proxy.cors.sh/https://raw.githack.com/geyversontp/AR/master/";
 	var endcomp = end.concat(data);
 	//var endcomp = end.concat(data,".gltf");
+	    alert(endcomp);
 
     </script>
 
@@ -20,11 +21,22 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
 	<script>
+		var number = 0;
     window.onload = function () {
       document
         .querySelector(".say-hi-button")
         .addEventListener("click", function () {
-		document.querySelector('a-scene').querySelector("#tree_model").setAttribute('gltf-model', endcomp );
+	        number++;
+	        if (number > 0)
+		{
+			document.querySelector('a-scene').querySelector("#tree_model").setAttribute('gltf-model', endcomp );
+			number = 0;
+		}
+	       else
+	       {
+		       var caminho = "https://proxy.cors.sh/https://raw.githack.com/geyversontp/AR/master/Estator.gltf";
+		       document.querySelector('a-scene').querySelector("#tree_model").setAttribute('gltf-model', caminho );
+	       }
         });
     };
 	</script>
@@ -81,12 +93,12 @@
                     position="0 0 0"
                     scale="0.01 0.01 0.01"
                     rotation="90 0 0"
-                    gltf-model="https://proxy.cors.sh/https://raw.githack.com/geyversontp/AR/master/Estator.gltf"
+                    gltf-model="https://proxy.cors.sh/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
 
-                <a-text value="TExto de exemplo" scale="1 1 1" position="-1 0 -0" gesture-handler></a-text>
+                <a-text value="Exemplo" scale="1 1 1" position="-1 0 -0" gesture-handler></a-text>
 
             </a-marker>
 
