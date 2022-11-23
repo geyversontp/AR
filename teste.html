@@ -11,7 +11,7 @@
 	var end = "https://proxy.cors.sh/https://raw.githack.com/geyversontp/AR/master/";
 	var endcomp = end.concat(data,".gltf");
 	
-	alert(endcomp);
+	//alert(endcomp);
 
     </script>
 
@@ -26,14 +26,13 @@
         <a-scene embedded arjs>
 
 	  <a-assets id="geral">
-	    <a-asset-item id="tree" src="https://proxy.cors.sh/https://raw.githack.com/geyversontp/AR/master/scene.gltf"></a-asset-item>
+	    <a-asset-item id="tree" src="https://corsanywhere.herokuapp.com/https://raw.githack.com/geyversontp/AR/master/scene.gltf"></a-asset-item>
 	  </a-assets>
 
 
         <a-marker preset="hiro">
             <a-entity
             position="0 0 0"
-            scale="0.005 0.005 0.005"
 	    rotation="90 0 0"
 	    gltf-model="#tree"
             ></a-entity>
