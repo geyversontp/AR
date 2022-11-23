@@ -22,6 +22,8 @@
 
 	<script>
 		var number = 0;
+		var caminho = "https://proxy.cors.sh/https://raw.githack.com/geyversontp/AR/master/Estator.gltf";
+		
     window.onload = function () {
       document
         .querySelector(".say-hi-button")
@@ -31,11 +33,14 @@
 		{
 			document.querySelector('a-scene').querySelector("#tree_model").setAttribute('gltf-model', endcomp );
 			number = 0;
+			alert(number);
+			alert(endcomp);
 		}
 	       else
 	       {
-		       var caminho = "https://proxy.cors.sh/https://raw.githack.com/geyversontp/AR/master/Estator.gltf";
 		       document.querySelector('a-scene').querySelector("#tree_model").setAttribute('gltf-model', caminho );
+		       alert(number);
+		       alert(caminho);
 	       }
         });
     };
